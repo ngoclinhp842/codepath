@@ -8,7 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var numberOfPetsLabel: UILabel!
+    @IBOutlet weak var yearSegmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var schoolNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    
+    @IBOutlet weak var morePetsStepper: UIStepper!
+    @IBOutlet weak var morePetsSwitch: UISwitch!
+    
+    @IBAction func changeBackgroundColor(_ sender: UIButton) {
+        // change background color to lightGray when this button pressed
+        self.view.backgroundColor = UIColor.lightGray
+    }
+    
     @IBAction func introduceSelfDidTap(_ sender: UIButton) {
         // let user choose the title from the segmented control
         // (first, second, third, or forth)
@@ -35,15 +49,6 @@ class ViewController: UIViewController {
         numberOfPetsLabel.text = "\(Int(sender.value))"
     }
     
-    @IBOutlet weak var numberOfPetsLabel: UILabel!
-    @IBOutlet weak var yearSegmentedControl: UISegmentedControl!
-    
-    @IBOutlet weak var schoolNameTextField: UITextField!
-    @IBOutlet weak var lastNameTextField: UITextField!
-    @IBOutlet weak var firstNameTextField: UITextField!
-    
-    @IBOutlet weak var morePetsStepper: UIStepper!
-    @IBOutlet weak var morePetsSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
